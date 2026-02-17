@@ -1,0 +1,18 @@
+import csv
+
+# Read data from input.csv and write to output.csv
+with open('input.csv', 'r') as infile, open('output.csv', 'w', newline='') as outfile:
+    reader = csv.DictReader(infile)
+    fieldnames = ['Full Name', 'Email', 'Department']
+    writer = csv.DictWriter(outfile, fieldnames=fieldnames)
+    writer.writeheader()
+
+    for row in reader:
+        full_name = f"{row['First Name']} {row['Last Name']}"
+        writer.writerow({
+            'Full Name': full_name,
+            'Email': row['Email'],
+            'Department': row['Department']
+        })
+
+print("✅ Data formatted and written successfully!")

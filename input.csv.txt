@@ -1,0 +1,3 @@
+First Name,Last Name,Email,Department
+Ali,Khan,ali.khan@example.com,IT
+Sara,Hussain,sara.hussain@example.com,Marketing
